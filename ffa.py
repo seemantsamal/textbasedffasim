@@ -27,9 +27,11 @@ class Player:
             print(f"{self.name} attacks {other_player.name} for {damage} damage. {BOLD}{other_player.name} has been eliminated by {self.name}.{RESET}")
     
 def initialize_players():
-    numOfplayers=int(input("Enter the number of players and enter their names in separate lines:"))
+    numOfplayers=int(input("Enter the number of players:"))
     players = []
 
+    print("Enter the names of the players in separate lines:")
+    
     for i in range(numOfplayers):
         name=input()
         players.append(Player(name))
